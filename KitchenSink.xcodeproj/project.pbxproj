@@ -22,6 +22,7 @@
 		20236E8117E30DAA00C6791D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 20236E7F17E30DAA00C6791D /* InfoPlist.strings */; };
 		20236E8317E30DAA00C6791D /* KitchenSinkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 20236E8217E30DAA00C6791D /* KitchenSinkTests.m */; };
 		20236E8E17E30E8600C6791D /* AskerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20236E8D17E30E8600C6791D /* AskerViewController.m */; };
+		20321F5317E348F4006FC5B0 /* CMMotionManager+Shared.m in Sources */ = {isa = PBXBuildFile; fileRef = 20321F5217E348F4006FC5B0 /* CMMotionManager+Shared.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,10 @@
 		20236E8217E30DAA00C6791D /* KitchenSinkTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KitchenSinkTests.m; sourceTree = "<group>"; };
 		20236E8C17E30E8600C6791D /* AskerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AskerViewController.h; sourceTree = "<group>"; };
 		20236E8D17E30E8600C6791D /* AskerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AskerViewController.m; sourceTree = "<group>"; };
+		20321F4A17E34871006FC5B0 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		20321F4F17E348AA006FC5B0 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		20321F5117E348F4006FC5B0 /* CMMotionManager+Shared.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CMMotionManager+Shared.h"; sourceTree = "<group>"; };
+		20321F5217E348F4006FC5B0 /* CMMotionManager+Shared.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CMMotionManager+Shared.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,9 +90,9 @@
 		20236E4B17E30DAA00C6791D = {
 			isa = PBXGroup;
 			children = (
+				20236E5617E30DAA00C6791D /* Frameworks */,
 				20236E5D17E30DAA00C6791D /* KitchenSink */,
 				20236E7C17E30DAA00C6791D /* KitchenSinkTests */,
-				20236E5617E30DAA00C6791D /* Frameworks */,
 				20236E5517E30DAA00C6791D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -104,6 +109,8 @@
 		20236E5617E30DAA00C6791D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				20321F4F17E348AA006FC5B0 /* MobileCoreServices.framework */,
+				20321F4A17E34871006FC5B0 /* CoreMotion.framework */,
 				20236E5717E30DAA00C6791D /* Foundation.framework */,
 				20236E5917E30DAA00C6791D /* CoreGraphics.framework */,
 				20236E5B17E30DAA00C6791D /* UIKit.framework */,
@@ -115,14 +122,16 @@
 		20236E5D17E30DAA00C6791D /* KitchenSink */ = {
 			isa = PBXGroup;
 			children = (
-				20236E6617E30DAA00C6791D /* KitchenSinkAppDelegate.h */,
-				20236E6717E30DAA00C6791D /* KitchenSinkAppDelegate.m */,
-				20236E6917E30DAA00C6791D /* Main.storyboard */,
 				20236E8C17E30E8600C6791D /* AskerViewController.h */,
 				20236E8D17E30E8600C6791D /* AskerViewController.m */,
+				20321F5117E348F4006FC5B0 /* CMMotionManager+Shared.h */,
+				20321F5217E348F4006FC5B0 /* CMMotionManager+Shared.m */,
+				20236E6F17E30DAA00C6791D /* Images.xcassets */,
+				20236E6617E30DAA00C6791D /* KitchenSinkAppDelegate.h */,
+				20236E6717E30DAA00C6791D /* KitchenSinkAppDelegate.m */,
 				20236E6C17E30DAA00C6791D /* KitchenSinkViewController.h */,
 				20236E6D17E30DAA00C6791D /* KitchenSinkViewController.m */,
-				20236E6F17E30DAA00C6791D /* Images.xcassets */,
+				20236E6917E30DAA00C6791D /* Main.storyboard */,
 				20236E5E17E30DAA00C6791D /* Supporting Files */,
 			);
 			path = KitchenSink;
@@ -261,6 +270,7 @@
 				20236E6E17E30DAA00C6791D /* KitchenSinkViewController.m in Sources */,
 				20236E8E17E30E8600C6791D /* AskerViewController.m in Sources */,
 				20236E6817E30DAA00C6791D /* KitchenSinkAppDelegate.m in Sources */,
+				20321F5317E348F4006FC5B0 /* CMMotionManager+Shared.m in Sources */,
 				20236E6417E30DAA00C6791D /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -474,6 +484,7 @@
 				20236E8817E30DAA00C6791D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		20236E8917E30DAA00C6791D /* Build configuration list for PBXNativeTarget "KitchenSinkTests" */ = {
 			isa = XCConfigurationList;
@@ -482,6 +493,7 @@
 				20236E8B17E30DAA00C6791D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
