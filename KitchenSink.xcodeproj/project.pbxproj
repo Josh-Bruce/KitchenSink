@@ -21,6 +21,7 @@
 		20236E7917E30DAA00C6791D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20236E5B17E30DAA00C6791D /* UIKit.framework */; };
 		20236E8117E30DAA00C6791D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 20236E7F17E30DAA00C6791D /* InfoPlist.strings */; };
 		20236E8317E30DAA00C6791D /* KitchenSinkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 20236E8217E30DAA00C6791D /* KitchenSinkTests.m */; };
+		20236E8E17E30E8600C6791D /* AskerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20236E8D17E30E8600C6791D /* AskerViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		20236E7E17E30DAA00C6791D /* KitchenSinkTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KitchenSinkTests-Info.plist"; sourceTree = "<group>"; };
 		20236E8017E30DAA00C6791D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		20236E8217E30DAA00C6791D /* KitchenSinkTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KitchenSinkTests.m; sourceTree = "<group>"; };
+		20236E8C17E30E8600C6791D /* AskerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AskerViewController.h; sourceTree = "<group>"; };
+		20236E8D17E30E8600C6791D /* AskerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AskerViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +118,8 @@
 				20236E6617E30DAA00C6791D /* KitchenSinkAppDelegate.h */,
 				20236E6717E30DAA00C6791D /* KitchenSinkAppDelegate.m */,
 				20236E6917E30DAA00C6791D /* Main.storyboard */,
+				20236E8C17E30E8600C6791D /* AskerViewController.h */,
+				20236E8D17E30E8600C6791D /* AskerViewController.m */,
 				20236E6C17E30DAA00C6791D /* KitchenSinkViewController.h */,
 				20236E6D17E30DAA00C6791D /* KitchenSinkViewController.m */,
 				20236E6F17E30DAA00C6791D /* Images.xcassets */,
@@ -200,6 +205,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = SurfTrack;
 				TargetAttributes = {
+					20236E5317E30DAA00C6791D = {
+						DevelopmentTeam = D4QBQF6Z9N;
+					};
 					20236E7417E30DAA00C6791D = {
 						TestTargetID = 20236E5317E30DAA00C6791D;
 					};
@@ -251,6 +259,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				20236E6E17E30DAA00C6791D /* KitchenSinkViewController.m in Sources */,
+				20236E8E17E30E8600C6791D /* AskerViewController.m in Sources */,
 				20236E6817E30DAA00C6791D /* KitchenSinkAppDelegate.m in Sources */,
 				20236E6417E30DAA00C6791D /* main.m in Sources */,
 			);
@@ -381,6 +390,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KitchenSink/KitchenSink-Prefix.pch";
 				INFOPLIST_FILE = "KitchenSink/KitchenSink-Info.plist";
@@ -394,6 +404,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KitchenSink/KitchenSink-Prefix.pch";
 				INFOPLIST_FILE = "KitchenSink/KitchenSink-Info.plist";
