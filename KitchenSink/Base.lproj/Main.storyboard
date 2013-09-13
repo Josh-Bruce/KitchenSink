@@ -26,6 +26,16 @@
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="HxP-Sn-avT"/>
+                                    <barButtonItem title="Add Food Photo" id="gQJ-vT-2eA">
+                                        <connections>
+                                            <action selector="addFoodPhoto:" destination="BYZ-38-t0r" id="x8s-Hw-w1G"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Take Food Photo" id="t6Y-oV-I5H">
+                                        <connections>
+                                            <action selector="takeFoodPhoto:" destination="BYZ-38-t0r" id="1z3-A8-GXw"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem title="Control Sink" id="ywF-sY-bxY">
                                         <connections>
                                             <action selector="controlSink:" destination="BYZ-38-t0r" id="LgX-UA-IIg"/>
