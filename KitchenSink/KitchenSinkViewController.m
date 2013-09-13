@@ -9,16 +9,44 @@
 #import "KitchenSinkViewController.h"
 #import "AskerViewController.h"
 
-@interface KitchenSinkViewController ()
+@interface KitchenSinkViewController () <UIActionSheetDelegate>
 @property (weak, nonatomic) IBOutlet UIView *kitchenSink;
 @property (weak, nonatomic) NSTimer *drainTimer;
+@property (weak, nonatomic) UIActionSheet *sinkControlActionSheet;
 @end
 
 @implementation KitchenSinkViewController
 
-#define DRAIN_DURATION 3.0
-#define DRAIN_DELAY 1.0
-#define MOVE_DURATION 3.0
+#define SINK_CONTROL @"Sink Controls"
+#define SINK_CONTROL_STOP_DRAIN @"Stopper Drain"
+#define SINK_CONTROL_UNSTOP_DRAIN @"Unstopper Drain"
+#define SINK_CONTROL_CANCEL @"Cancel"
+#define SINK_CONTROL_EMPTY @"Empty Sink"
+
+- (IBAction)controlSink:(UIBarButtonItem *)sender
+{
+    if (!self.sinkControlActionSheet) {
+        NSString *drainButton = self.drainTimer ? SINK_CONTROL_STOP_DRAIN : SINK_CONTROL_UNSTOP_DRAIN;
+        UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:SINK_CONTROL delegate:self cancelButtonTitle:SINK_CONTROL_CANCEL destructiveButtonTitle:SINK_CONTROL_EMPTY otherButtonTitles:drainButton, nil];
+        [actionSheet showFromBarButtonItem:sender animated:YES];
+        self.sinkControlActionSheet = actionSheet;
+    }
+}
+
+- (void)actionSheet:(UIActionSheet *)actionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == actionSheet.destructiveButtonIndex) {
+        [self.kitchenSink.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
+    } else {
+        NSString *choice = [actionSheet buttonTitleAtIndex:buttonIndex];
+        if ([choice isEqualToString:SINK_CONTROL_STOP_DRAIN]) {
+            [self stopDrainTimer];
+        } else if ([choice isEqualToString:SINK_CONTROL_UNSTOP_DRAIN]) {
+            [self startDrainTimer];
+        }
+    }
+}
+
 #define DISH_CLEANING_INTERVAL 2.0
 
 - (void)cleanDish
@@ -28,6 +56,9 @@
         [self performSelector:@selector(cleanDish) withObject:nil afterDelay:DISH_CLEANING_INTERVAL];
     }
 }
+
+#define DRAIN_DURATION 3.0
+#define DRAIN_DELAY 1.0
 
 - (void)startDrainTimer
 {
@@ -79,6 +110,8 @@
         }
     }
 }
+
+#define MOVE_DURATION 3.0
 
 - (IBAction)tap:(UITapGestureRecognizer *)sender
 {
