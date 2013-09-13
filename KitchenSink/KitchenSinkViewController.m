@@ -160,8 +160,8 @@
     [self stopDrift];
 }
 
-#define DRIFT_HZ 10.0
-#define DRIFT_RATE 10.0
+#define DRIFT_HZ 100
+#define DRIFT_RATE 10
 
 - (void)startDrift
 {
